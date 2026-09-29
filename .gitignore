@@ -1,0 +1,24 @@
+# Python generated files
+__pycache__/
+*.py[cod]
+build/
+dist/
+wheels/
+*.egg-info/
+
+# Virtual environments
+.venv/
+
+# IDE / editor state
+.idea/
+.vscode/
+
+# Local simulation state and experiment assets
+*.pkl
+runs/
+/data/
+/archive/
+
+# uv offline cache
+.uv-cache/
+

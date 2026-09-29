@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "developmental-3d-spiking-neural-network"
+version = "0.2.0"
+description = "Developmental whole-brain structured spiking neural network"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "cryptography>=50.0.1",
+    "matplotlib>=3.11.2",
+    "numpy>=2.1",
+    # Differentiable neuron structures (dendrite/soma/axon/synapse). CPU wheel:
+    # uv pip install torch --index-url https://download.pytorch.org/whl/cpu
+    "pypdf>=6.19.0",
+    "torch>=2.14",
+]
+
+[project.scripts]
+bionic-brain = "bionic_brain.interfaces.cli:main"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/bionic_brain"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+addopts = "-ra"
