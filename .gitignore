@@ -22,3 +22,9 @@ runs/
 # uv offline cache
 .uv-cache/
 
+
+# Research paper source files and extracted corpora
+*.pdf
+*.caj
+/data/corpora/papers*/
+
